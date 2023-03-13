@@ -1,5 +1,5 @@
 # whoWroteitApp
-practicing \n
+practicing 
 AsyncTask
 Loading images from the web
 using API
