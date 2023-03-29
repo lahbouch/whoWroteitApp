@@ -4,6 +4,7 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.os.Bundle
+import android.view.KeyEvent
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
@@ -34,7 +35,17 @@ class MainActivity : AppCompatActivity() {
             searchBooks(it)
         }
 
+        mBookInput.setOnKeyListener { view, i, keyEvent -> if (keyEvent.keyCode == KeyEvent.KEYCODE_ENTER){
+            mSearchBtn.performClick()
+        }
+            true
+        }
+
     }
+
+
+
+//  salam
 
     private fun searchBooks(view: View) {
         val q = mBookInput.text.toString()
