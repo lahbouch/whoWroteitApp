@@ -48,7 +48,7 @@
         android:id="@+id/thumbnail"
         android:scaleType="centerCrop"
         android:visibility="gone"
-        android:layout_gravity="center"
+    android:layout_gravity="center"
         android:layout_width="150dp"
         android:layout_height="210dp"
         tools:src="@drawable/ic_launcher_background"

@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import com.bumptech.glide.Glide
 import com.example.asynctaskloaderdemo.R
 import com.squareup.picasso.NetworkPolicy
 import com.squareup.picasso.Picasso
@@ -72,13 +73,18 @@ class FetchBook(mTitleText : TextView ,  mAuteurText : TextView,mThumbnailImg : 
                 mAuteurText.get()?.visibility = View.VISIBLE;
                 Picasso.get().load(thumbnail)
                     .networkPolicy(NetworkPolicy.NO_CACHE,NetworkPolicy.NO_STORE)
+                    .placeholder(R.drawable.baseline_downloading_24)
                     .into(mThumbnailImg.get())
+
+//                Glide.with(mThumbnailImg.get()!!.context)
+//                    .load(thumbnail)
+//                    .into(mThumbnailImg.get()!!)
                 mThumbnailImg.get()?.visibility = View.VISIBLE
 
             }else{
                 mTitleText.get()?.setText(R.string.no_result)
                 mAuteurText.get()?.text = ""
-                mThumbnailImg.get()?.visibility = View.GONE
+                mThumbnailImg.get()?.visibility = View.VISIBLE
             }
 
         } catch (e: JSONException) {

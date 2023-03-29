@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">من الكاتب?</string>
+    <string name="input_hint">ادخل اسم الكتاب</string>
+    <string name="instructions">ادخل اسم الكتاب لمعرفة كاتبه</string>
+    <string name="button_text">ابحث</string>
+    <string name="no_result">لاتوجد نتيجة</string>
+    <string name="loading">جار البحث ...</string>
+    <string name="no_search_term">المرجوا ادخال مفردات البحث</string>
+</resources>
